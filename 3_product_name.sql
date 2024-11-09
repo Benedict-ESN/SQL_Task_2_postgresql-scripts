@@ -1,0 +1,5 @@
+-- Скрипт возвращения поля product_name для пользователей с именем alexey
+SELECT ORDERS.product_name
+FROM CUSTOMERS
+JOIN ORDERS ON CUSTOMERS.id = ORDERS.customer_id
+WHERE LOWER(CUSTOMERS.name) = 'alexey';
